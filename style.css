@@ -3,7 +3,8 @@
     margin:0;
     padding:0;
     font-weight:500;
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family: Verdana, sans-serif;
+
 }
 
 nav ul li{
@@ -15,33 +16,38 @@ nav ul li{
 body{
     margin:0;
     padding:0;
-    background-color: black;
+    background-color:#ecf5f2 ;
     color:white;
     height:100;
+    color:rgb(165, 160, 160);
+    scroll-behavior:smooth;
 }
 
 nav{
-    background-color:black;
+    background-color:#ecf5f2;
     display:flex;
    
     
     justify-content:space-around;
     align-items:center;
-    margin: 0px;
+    margin: auto;
+    width:80%;
 }
 .portfolio{
    
 padding: 0 30px;
 }
 .contain{
-    background-image:url("Screenshot (3552).png");
+    background-image:url("20231020_174026-fotor-bg-remover-2023121914219.png");
     object-fit:cover;
     background-size: auto 100%;
     background-position:right top;
     background-repeat: no-repeat;
-    width:100%;
+  
     height:100vh;
     margin-top:0;
+    width:80%;
+    margin:auto;
    
 }
 
@@ -66,6 +72,12 @@ padding: 0 30px;
 .outline{
     position:relative;
     display:inline-block;
+}
+.outline a{
+    text-decoration: none;
+    color:rgb(165, 160, 160);
+    font-weight:300px;
+    
 }
 
 .outline::after{
@@ -104,6 +116,9 @@ content: "";
 .contain2{
    position:relative;
    margin-top:15px;
+   width:80%;
+   margin:auto;
+   margin-top:28px;
    
 }
 
@@ -117,7 +132,7 @@ content: "";
     width:100%;
     bottom:0;
     background-size: cover;
-    opacity:0.3;
+    opacity:0.5;
 
 
 }
@@ -127,6 +142,7 @@ content: "";
      padding:15vh 0 30vh;
      font-size:16px;
      list-style:none;
+     color:rgb(36, 37, 37);
 }
 
 .contain2 ul li span{
@@ -139,15 +155,23 @@ content: "";
     font-size:25px !important
 }
 
-.contain2 ul:hover li span{
-    color:black;
-    
+
+.skill1{
+    width: 70%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    Justify-content:center;
+    margin:auto;
 }
 
 .skill1 ul{
     display: flex;
    justify-content:center;
    align-items:center;
+   flex-wrap: wrap;
+ 
+   justify-content:center;
 }
 .skill1 ul li{
     list-style:none;
@@ -157,7 +181,7 @@ content: "";
     font-size:20px;
     font-weight:400px;
     border-radius:3px;
-    background-color:#EC5578;
+    background-color:#ecf5f2;
     transition: transform 0.5s;
 }
 
@@ -173,11 +197,15 @@ content: "";
     display:flex;
     justify-content:center;
     padding: 20px;
+    flex-wrap:wrap;
 }
 
 .fig{
     margin-right:3px;
     transition: transform 0.5s;
+    max-width: 100%;
+    height: auto; /* To maintain aspect ratio */
+  
 }
 
 
@@ -195,19 +223,23 @@ content: "";
 .my-project{
     display:grid;
     grid-gap: 20px;
-    grid-template-columns: repeat(4, minmax(250px, 1fr));
+    grid-template-columns: 35% 35%;
     justify-content:center;
    
 }
+.projects center h1{
+    margin-bottom:50px;
+}
 .project{
     overflow:hidden;
-   
+   color:black;
     position:relative;
-    background-color:rgb(50,50,50);
+    background-color:#e2f5ee;
     transition: transform 0.5s, height 0.5s;
     padding:10px;
     height:100%;
     overflow:hidden;
+
 
     border-radius:10px;
 }
@@ -223,14 +255,71 @@ content: "";
 
 .project h3{
     text-align:center;
+  
+}
+.project a{
+    text-align:center;
+    display:block;
+    text-decoration: none;
 }
 
 .project:hover{
     transform: translateY(-5px);
-    box-shadow: 5px 5px 5px rgb(80,80,80);
-    background-color:#EC5578;
+    box-shadow: 5px 5px 5px rgb(198, 231, 230);
+    background-color:azure;
     height:100%;
 
 }
 
 
+.contact{
+    display:grid;
+    grid-template-columns: 40%  40%;
+    background-image:linear-gradient(to bottom right , rgb(136, 227, 218), rgba(250, 183, 201, 0.981));
+    height:170px;
+    width:100%;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+    margin-top:25px;
+    color:blue;
+    text-align:center;
+    
+}
+
+.contact a{
+    text-decoration: none;
+}
+@media screen and (max-width:600px)
+{
+ .my-project{
+
+   display:grid;
+   grid-template-columns: 100%;
+ }
+
+ .skill-fig{
+    display:grid;
+    grid-template-columns: 20% 20%  20%;
+    grid-gap:10px;
+  
+ }
+ .fig{
+    max-width:100%;
+    height:auto;
+ }
+ .fig:hover{
+    transform: translateY(-3px);
+    outline: 2px solid #EC5578;
+}
+
+}
+
+
+
+@media screen and(min-width:600px) and (max-width:900px){
+    .my-project{
+        display:grid;
+        grid-template-columns:45% 45%;
+    }
+}

@@ -14,16 +14,18 @@
   </head>
   <body>
     <div class="portfolio">
-      <nav >
+      <nav id="home">
         <img src="Screenshot (3592).png" style="height: 70px" alt="" />
         <ul>
-          <li class="outline"><a>Home</a></li>
-          <li class="outline"><a>About</a></li>
-          <li class="outline"><a>Contact</a></li>
+         
+          <li class="outline"><a href="#education" >Education</a></li>
+          <li  class="outline"><a  href="#skill" >Skills & tools</a></li>
+          <li class="outline"><a  href="#project">Project</a></li>
+          <li class="outline" ><a href="#contact">Contact</a></li>
         </ul>
       </nav>
 
-      <div class="contain">
+      <div   class="contain">
         <div class="introduction">
           <p style="font-size: 30px; color: rgb(165, 160, 160)">
             Full Stack Web Developer(MERN)
@@ -39,13 +41,13 @@
         </div>
       </div>
 
-      <div class="contain2">
+      <div id="education" class="contain2">
         <center>
           <h1
             class="outline"
             style="text-align: center; padding-top: 5vh; margin-bottom: 25px"
           >
-            Education
+           <a href="#home"> Education</a>
           </h1>
         </center>
 
@@ -63,9 +65,9 @@
         </ul>
       </div>
 
-      <div class="skill1">
+      <div id="skill" class="skill1">
         <center>
-          <h1 class="outline">Skills</h1>
+          <h1 class="outline" style="margin-bottom:30px"><a href="#home">Skills</a></h1>
         </center>
         <ul>
           <li> MERN stack technology</li>
@@ -155,59 +157,73 @@
 
 
       
-      <div class="projects">
+      <div id="project" class="projects">
         <center>
           <h1
             class="outline"
-            style="margin-bottom: 20px; margin-top: 20px; text-align: center"
+            style="margin-bottom: 40px; margin-top: 20px; text-align: center"
           >
-            My Projects
+            <a href="#home">My Projects</a>
           </h1>
         </center>
 
         <div class="my-project">
           <div class="project">
+          
             <img src="kelly-sikkema-9OGNpJPVMZ8-unsplash.jpg" alt="" />
             <div class="detail">
               <h3>Notebook</h3>
+              <a  href="https://github.com/Deepak4422/Notebook" target="blank">Github</a>
+             
               <ul>
                 <li>
                   <p>
-                    This is a complete frontend to backend website made using
-                    MERN stack technology. The UI interface is ceted using
-                    React,HTML, CSS and bootstrap. Backend API is made using
-                    NodeJs.
+                    It is a complete frontend to backend project. You can login/signup and
+                    add, edit and delete your notes. Frontend was made using function based components in React.
                   </p>
                 </li>
                 <li>
                   <p>
-                    User can Signup and store their notes online using this app.
-                    It sha features like adding, updating and deleting a note
-                    from the website
+                    Made use of useContext hook in which I coded the functions to add, edit and delete the notes on
+                    the UI as well on the database using fetch API call. Made use of authentication token to secure
+                    the notes of other people.
                   </p>
                 </li>
+                <li><p>
+                  In the backend I made use of Nodejs and MongoDB. Made the schema of user details and the
+                  notes. Made the API of login, signup, fetchnotes, addnotes, editnotes and deletenotes. Hased the
+                  password in the login and signup and used the jwt library to convert the user detail into a token
+                  and send it to the localStorage of the website.
+                </p></li>
+
+                <li><p>
+                  The token was used in the frontend request fucntions and in the backend made use of middleware
+                    to catch the token and use it in the backend APIs
+                </p></li>
               </ul>
             </div>
+            
           </div>
 
           <div class="project">
             <img src="noaa-ZVhm6rEKEX8-unsplash.jpg" alt="" />
             <div class="detail">
               <h3>Weather-app</h3>
+              <a  href="https://github.com/Deepak4422/Weather_app" target="blank">Github</a>
               <ul>
                 <li>
                   <p>
-                    This is a complete frontend to backend website made using
-                    MERN stack technology. The UI interface is ceted using
-                    React,HTML, CSS and bootstrap. Backend API is made using
-                    NodeJs.
+                     Made using React and CSS3. Used the OpenWatherMap API to fetch the current weather parameter
+of any place. If you enter a city name it will show the temperature, min and max temperature,
+pressure, wind speed and relative humidity.
+
                   </p>
                 </li>
                 <li>
                   <p>
-                    User can Signup and store their notes online using this app.
-                    It sha features like adding, updating and deleting a note
-                    from the website
+                    Separated the news in categories and used the React-router-dom for routing to different pages of
+                    the app. The data from the NewsAPI was first converted to object and then used the map function
+                    to iterate over all the object of the array. Made use of loaders to show if when the content is loading
                   </p>
                 </li>
               </ul>
@@ -218,22 +234,25 @@
             <img src="news-636978.jpg" alt="" />
             <div class="detail">
               <h3>News-app</h3>
+              <a  href="https://github.com/Deepak4422/Newsapp"  target="blank">Github</a>
               <ul>
                 <li>
                   <p>
-                    This is a complete frontend to backend website made using
-                    MERN stack technology. The UI interface is ceted using
-                    React,HTML, CSS and bootstrap. Backend API is made using
-                    NodeJs.
+                     It is a frontend project made using React library. Made use of NewsAPI to fetch the daily news.
+Made the website responsive using Bootstrap.
+ 
                   </p>
                 </li>
                 <li>
                   <p>
-                    User can Signup and store their notes online using this app.
-                    It sha features like adding, updating and deleting a note
-                    from the website
+                    Separated the news in categories and used the React-router-dom for routing to different pages of
+                    the app.
                   </p>
                 </li>
+                <li><p>
+                  The data from the NewsAPI was first converted to object and then used the map function
+                  to iterate over all the object of the array. Made use of loaders to show it when the content is loading
+                </p></li>
               </ul>
             </div>
           </div>
@@ -242,6 +261,7 @@
             <img src="Screenshot (3566).png" alt="" />
             <div class="detail">
               <h3>Aquaponics Monitoring and Control</h3>
+              <a  href="https://github.com/Deepak4422/Smart-Monitoring-and-Control-of-Aquaponics-System" target="blank">Github</a>
               <ul>
                 <li>
                   <p>
@@ -263,7 +283,17 @@
           </div>
         </div>
       </div>
+
+      <footer>
+        <div id="contact" class="contact">
+          <p>Email- deepakkumarka442@gmail.com</p>
+          <p>Phone Number-  +91-9565309319</p>
+          <p>Linkedin-  <a href="https://www.linkedin.com/in/deepak4422123/" target="blank">Linkedin</a></p>
+          <p>GitHub- <a href="https://github.com/Deepak4422" target="blank">GitHub</a></p>
+        </div>
+      </footer>
     </div>
+    <script src="./index.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
